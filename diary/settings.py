@@ -8,6 +8,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
+
+이 파일은 Django 설정을 모듈 변수로 표현한 보통의 Python 모듈입니다.
 """
 
 from pathlib import Path
@@ -75,8 +77,12 @@ WSGI_APPLICATION = 'diary.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test',
+        'USER': 'root',
+        'PASSWORD': 'gouthiki90',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
 }
 
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
